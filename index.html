@@ -1,0 +1,83 @@
+<html>
+	<style type="text/css">
+		body {
+			background: black;
+			color: white;
+			margin: 0px;
+		}
+		#FL, #FC, #FR, #CL, #CR, #RL, #RC, #RR {
+			;
+			width: 10%;
+			height: 10%;
+		}
+		#iFL, #iFC, #iFR, #iCL, #iCR, #iRL, #iRC, #iRR {
+			display: none;
+			background: lime;
+			width: 100%;
+			height: 100%;
+		}		
+		input { 
+			width: 20%;
+			height: 20%;
+			font-size: 400%;
+			background: black;
+			color: white;
+			border: 0px;
+		}
+		#progress {
+			font-size: 1500%;
+		}
+	</style>
+	<script src="jquery-2.1.1.js"></script>
+	<script src="app.js"></script>
+	<body>
+		<table style="width: 100%; height: 100%">
+			<tr>
+				<td id="FL"><div id="iFL">&nbsp;</div></td>
+				<td style="width: 35%"></td>
+				<td id="FC"><div id="iFC">&nbsp;</div></td>
+				<td style="width: 35%"></td>
+				<td id="FR"><div id="iFR">&nbsp;</div></td>
+			</tr>
+			<tr>
+				<td style="height: 35%"></td>
+				<td id="center" colspan="3" rowspan="3" align="center">
+					<div id="settings">
+						Ecken:<br>
+						<input type="submit" value="-" onclick="change('counter',-1)">
+						<input type="text" value="15" id="counter" style="width: 8%;">
+						<input type="submit" value="+"  onclick="change('counter',1)">
+						
+						<br><br>
+						Zeit:<br>
+						<input type="submit" value="-" onclick="change('timer',-1)">
+						<input type="text" value="5" id="timer" style="width: 8%;">
+						<input type="submit" value="+"  onclick="change('timer',1)">
+						
+						<br><br><input type="submit" value="go" onclick="go()">
+						<br><br><input type="submit" value="test" onclick="showCorner()" style="display: none">
+						<div style="display: none" id="console"></div>
+						<div style="display: none" id="lastC"></div>
+					</div>
+					<div id="progress">
+															
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td id="CL"><div id="iCL">&nbsp;</div></td>
+				<td id="CR"><div id="iCR">&nbsp;</div></td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td id="RL"><div id="iRL">&nbsp;</div></td>
+				<td></td>
+				<td id="RC"><div id="iRC">&nbsp;</div></td>
+				<td></td>
+				<td id="RR"><div id="iRR">&nbsp;</div></td>
+			</tr>
+			
+		</table>
+	</body>
+</html>
