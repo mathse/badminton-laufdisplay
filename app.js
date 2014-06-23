@@ -3,8 +3,10 @@ function change(c,v) {
 }
 function go() {
 	i = 0;
+	$("#progress").fadeIn("fast");
 	$("#progress").text("Bereit?");
 	$("#settings").fadeOut("slow");
+	
 	y = setInterval(function() {
 		i++;		
 		$("#console").text(i + "\n" + $("#console").text());
